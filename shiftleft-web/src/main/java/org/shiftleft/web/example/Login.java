@@ -23,37 +23,42 @@ package org.shiftleft.web.example;
 
 public class Login extends ExampleSupport {
 
-    public String execute() throws Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String username;
+	private String password;
 
-        if (isInvalid(getUsername())) return INPUT;
+	public String execute() throws Exception {
 
-        if (isInvalid(getPassword())) return INPUT;
+		if (isInvalid(getUsername()))
+			return INPUT;
 
-        return SUCCESS;
-    }
+		if (isInvalid(getPassword()))
+			return INPUT;
 
-    private boolean isInvalid(String value) {
-        return (value == null || value.length() == 0);
-    }
+		return SUCCESS;
+	}
 
-    private String username;
+	private boolean isInvalid(String value) {
+		return (value == null || value.length() == 0);
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    private String password;
+	public String getPassword() {
+		return password;
+	}
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 }

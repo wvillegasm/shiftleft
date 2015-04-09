@@ -1,4 +1,4 @@
-package com.itsoft.slt.dao;
+package com.itsoft.slt.test.services;
 
 /**
  * Hello world!

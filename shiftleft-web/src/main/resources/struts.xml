@@ -18,6 +18,13 @@
                 <param name="namespace">/example</param>
             </result>
         </action>
+        
+        <action name="tutorial_*" class="org.shiftleft.web.action.UserinfoAction" method="{1}">
+        	<result name="list">/WEB-INF/user/list.jsp</result>
+        	<result name="show">/WEB-INF/user/show.jsp</result>
+        	
+        	<!-- <result name="{1}">/WEB-INF/user/{1}.jsp</result> -->
+        </action>
 
     </package>
 

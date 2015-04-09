@@ -24,6 +24,10 @@ shiftleft-web/.settings/
 shiftleft-web/target/
 shiftleft-entity/.classpath
 shiftleft-entity/.project
+shiftleft-test-services/.classpath
+shiftleft-test-services/.project
+shiftleft-test-services/.settings/
+shiftleft-test-services/target/
 shiftleft-entity/.settings/
 shiftleft-entity/target/
 shiftleft-dao/.classpath

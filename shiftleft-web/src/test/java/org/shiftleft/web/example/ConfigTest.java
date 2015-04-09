@@ -43,6 +43,11 @@ public class ConfigTest extends StrutsTestCase {
         assertTrue("Expected an input result!",
                 ActionSupport.INPUT.equals(result));
     }
+    
+    protected void assertShow(String result) throws Exception {
+        assertTrue("Expected an show result!",
+                "show".equals(result));
+    }
 
     protected Map assertFieldErrors(ActionSupport action) throws Exception {
         assertTrue(action.hasFieldErrors());
