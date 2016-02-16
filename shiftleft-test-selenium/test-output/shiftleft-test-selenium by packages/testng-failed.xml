@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [shiftleft-test-selenium by packages]">
+  <test name="org.shiftleft.test.selenium(failed)">
+    <classes>
+      <class name="org.shiftleft.test.selenium.DemoTesting">
+        <methods>
+          <include name="just_first_test"/>
+        </methods>
+      </class> <!-- org.shiftleft.test.selenium.DemoTesting -->
+    </classes>
+  </test> <!-- org.shiftleft.test.selenium(failed) -->
+</suite> <!-- Failed suite [shiftleft-test-selenium by packages] -->

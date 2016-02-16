@@ -7,11 +7,12 @@
 		<groupId>com.itsoft.slt</groupId>
 		<artifactId>shiftleft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 
 	<artifactId>shiftleft-dao</artifactId>
 	<name>shiftleft-dao</name>
-	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
 
 	<dependencies>
 
@@ -27,8 +28,20 @@
 			<artifactId>shiftleft-entity</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 
 	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>javacc-maven-plugin</artifactId>
+				<version>2.6</version>
+
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

@@ -7,24 +7,31 @@
 		<groupId>com.itsoft.slt</groupId>
 		<artifactId>shiftleft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
-	
+
 	<artifactId>shiftleft-logic</artifactId>
 	<name>shiftleft-logic</name>
-	<url>http://maven.apache.org</url>
-	
+	<packaging>jar</packaging>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<dependencies>
-				
+
+		<dependency>
+			<groupId>com.itsoft.slt</groupId>
+			<artifactId>shiftleft-entity</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.itsoft.slt</groupId>
 			<artifactId>shiftleft-dao</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -32,32 +39,22 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>com.itsoft.slt.service.impl.UserClientService</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>javacc-maven-plugin</artifactId>
+				<version>2.6</version>
+
 			</plugin>
 		</plugins>
 	</build>
-	
+	<!-- <build> <plugins> <plugin> <artifactId>maven-assembly-plugin</artifactId> 
+		<configuration> <archive> <manifest> <mainClass>com.itsoft.slt.service.impl.UserClientService</mainClass> 
+		</manifest> </archive> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> 
+		</descriptorRefs> </configuration> <executions> <execution> <id>make-assembly</id> 
+		<phase>package</phase> <goals> <goal>single</goal> </goals> </execution> 
+		</executions> </plugin> </plugins> </build> -->
+
 </project>

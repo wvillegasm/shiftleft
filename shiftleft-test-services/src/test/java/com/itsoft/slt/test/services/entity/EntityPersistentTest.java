@@ -55,7 +55,7 @@ public class EntityPersistentTest {
         properties.put("hibernate.show_sql", "true");
         properties.put("hibernate.format_sql", "true");
         properties.put("hibernate.generateDdl", "true");
-        properties.put("hibernate.hbm2ddl.auto", "true");
+        properties.put("hibernate.hbm2ddl.auto", "create");
 		return properties;
 	}
 	

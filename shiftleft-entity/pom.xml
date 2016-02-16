@@ -3,54 +3,37 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>com.itsoft.slt</groupId>
 		<artifactId>shiftleft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 
 	<artifactId>shiftleft-entity</artifactId>
 	<name>shiftleft-entity</name>
-	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
 
 	<dependencies>
-		
+
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
-	
-		
-	</dependencies>
-	
 
-	<!-- <build>
+	</dependencies>
+
+
+	<build>
 		<plugins>
 			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>com.itsoft.slt.entities.test.remote.UserClientService</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>javacc-maven-plugin</artifactId>
+				<version>2.6</version>				
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 </project>

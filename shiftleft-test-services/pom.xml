@@ -8,12 +8,12 @@
 		<groupId>com.itsoft.slt</groupId>
 		<artifactId>shiftleft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 
 	<artifactId>shiftleft-test-services</artifactId>
-	<version>0.0.1</version>
 	<name>shiftleft-test-services</name>
-	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
 
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -22,7 +22,7 @@
 	</properties>
 
 	<dependencies>
-		
+
 		<dependency>
 			<groupId>org.glassfish.extras</groupId>
 			<artifactId>glassfish-embedded-static-shell</artifactId>
@@ -37,7 +37,7 @@
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derby</artifactId>
@@ -49,13 +49,15 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.3.8.Final</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.itsoft.slt</groupId>
 			<artifactId>shiftleft-logic</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
+
+
 	</dependencies>
 
 	<pluginRepositories>
@@ -65,4 +67,31 @@
 			<url>http://download.java.net/maven/glassfish/</url>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.itsoft.slt.service.impl.UserClientService</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

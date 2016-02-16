@@ -20,9 +20,9 @@
             <result type="redirectAction">Menu</result>
         </action>
 
-        <action name="*" class="org.shiftleft.web.example.ExampleSupport">
+        <!-- <action name="*" class="org.shiftleft.web.example.ExampleSupport">
             <result>/WEB-INF/example/{1}.jsp</result>
-        </action>
+        </action> -->
 
         <!-- Add additional "example" package actions here. -->
 

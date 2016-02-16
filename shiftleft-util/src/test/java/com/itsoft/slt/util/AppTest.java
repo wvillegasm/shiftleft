@@ -28,11 +28,10 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
+    @org.junit.Test
+    public void verify_rover_exists()
     {
-        assertTrue( true );
+        Rover r = new Rover();
+        assertNotNull(r);
     }
 }

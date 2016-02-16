@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoginSuite" parallel="none" verbose="1">
+	<test name="LoginTest">
+		<groups>
+			<run>
+				<exclude name="^login"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="org.shiftleft.test.selenium.DemoTesting" />
+		</classes>
+	</test> 
+</suite>
